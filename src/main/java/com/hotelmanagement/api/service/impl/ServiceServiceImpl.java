@@ -1,5 +1,8 @@
 package com.hotelmanagement.api.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.hotelmanagement.api.dto.ServiceDto;
 import com.hotelmanagement.api.entity.ServiceEntity;
 import com.hotelmanagement.api.repository.ServiceRepository;
@@ -25,5 +28,18 @@ public class ServiceServiceImpl implements ServiceService {
     BeanUtils.copyProperties(storedRoomDetails, returnValue);
 
     return returnValue;
+  }
+
+  @Override
+  public List<ServiceDto> getAllServices() {
+    List<ServiceDto> serviceDtoList = new ArrayList<ServiceDto>();
+    List<ServiceEntity> serviceEntityList = serviceRepository.findAll();
+    for (ServiceEntity serviceEntity : serviceEntityList) {
+      ServiceDto serviceDto = new ServiceDto();
+      BeanUtils.copyProperties(serviceEntity, serviceDto);
+      serviceDtoList.add(serviceDto);
+    }
+
+    return serviceDtoList;
   }
 }
