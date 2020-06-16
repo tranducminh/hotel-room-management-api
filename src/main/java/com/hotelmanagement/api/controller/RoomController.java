@@ -32,7 +32,7 @@ public class RoomController {
     return returnValue;
   }
 
-  @GetMapping(path = "/{status}")
+  @GetMapping(path = "/status/{status}")
   public List<RoomRest> getRoomsByStatus(@PathVariable String status) {
     List<RoomRest> returnValueList = new ArrayList<RoomRest>();
     List<RoomDto> roomDtoList = roomService.getRoomByStatus(status);
