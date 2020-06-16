@@ -12,7 +12,7 @@ public class BookingRoomDto implements Serializable {
   private long id;
   private long roomId;
   private long customerId;
-  private long employeeId = 123456789;
+  private long employeeId;
   private String status;
 
   public long getId() {

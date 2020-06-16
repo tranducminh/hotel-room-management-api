@@ -1,11 +1,10 @@
 package com.hotelmanagement.api.model.response;
 
-public class BookingRoomRest {
+public class BookingServiceRest {
   private long id;
   private long roomId;
-  private long customerId;
+  private long serviceId;
   private long employeeId;
-  private String status;
 
   public long getId() {
     return this.id;
@@ -23,12 +22,12 @@ public class BookingRoomRest {
     this.roomId = roomId;
   }
 
-  public long getCustomerId() {
-    return this.customerId;
+  public long getServiceId() {
+    return this.serviceId;
   }
 
-  public void setCustomerId(long customerId) {
-    this.customerId = customerId;
+  public void setServiceId(long serviceId) {
+    this.serviceId = serviceId;
   }
 
   public long getEmployeeId() {
@@ -37,14 +36,6 @@ public class BookingRoomRest {
 
   public void setEmployeeId(long employeeId) {
     this.employeeId = employeeId;
-  }
-
-  public String getStatus() {
-    return this.status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
   }
 
 }

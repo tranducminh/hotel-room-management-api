@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RoomImpl implements RoomService {
+public class RoomServiceImpl implements RoomService {
   @Autowired
   RoomRepository roomRepository;
 
@@ -50,6 +50,16 @@ public class RoomImpl implements RoomService {
       returnValueList.add(returnValue);
     }
     return returnValueList;
+  }
+
+  @Override
+  public RoomDto updateRoomStatus(long id, String roomStatus) {
+    RoomDto returnValue = new RoomDto();
+    RoomEntity roomEntity = roomRepository.findById(id);
+    roomEntity.setRoomStatus(roomStatus);
+    RoomEntity updatedRoomEntity = roomRepository.save(roomEntity);
+    BeanUtils.copyProperties(updatedRoomEntity, returnValue);
+    return returnValue;
   }
 
 }

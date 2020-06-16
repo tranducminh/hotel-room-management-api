@@ -10,9 +10,9 @@ public class BookingServiceDto implements Serializable {
   private static final long serialVersionUID = -4481614903614196191L;
 
   private long id;
-  private long customerId;
+  private long roomId;
   private long serviceId;
-  private long employeeId = 123456789;
+  private long employeeId;
 
   public long getId() {
     return this.id;
@@ -22,12 +22,12 @@ public class BookingServiceDto implements Serializable {
     this.id = id;
   }
 
-  public long getCustomerId() {
-    return this.customerId;
+  public long getRoomId() {
+    return this.roomId;
   }
 
-  public void setCustomerId(long customerId) {
-    this.customerId = customerId;
+  public void setRoomId(long roomId) {
+    this.roomId = roomId;
   }
 
   public long getServiceId() {

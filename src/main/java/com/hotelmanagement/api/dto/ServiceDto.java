@@ -1,27 +1,15 @@
-package com.hotelmanagement.api.entity;
+package com.hotelmanagement.api.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class ServiceDto implements Serializable {
 
-@Entity(name = "services")
-public class ServiceEntity implements Serializable {
   /**
    *
    */
-  private static final long serialVersionUID = 1497147565812308673L;
-
-  @Id
-  @GeneratedValue
+  private static final long serialVersionUID = 1L;
   private long id;
-
-  @Column(name = "serviceName", nullable = false)
   private String serviceName;
-
-  @Column(name = "description", nullable = true)
   private String description;
 
   public long getId() {

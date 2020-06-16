@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "booing_service")
+@Entity(name = "booking_service")
 public class BookingServiceEntity implements Serializable {
   /**
    *

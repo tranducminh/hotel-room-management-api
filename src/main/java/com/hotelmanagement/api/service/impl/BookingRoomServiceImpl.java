@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BookingRoomImpl implements BookingRoomService {
+public class BookingRoomServiceImpl implements BookingRoomService {
   @Autowired
   BookingRoomRepository bookingRoomRepository;
 
@@ -18,6 +18,8 @@ public class BookingRoomImpl implements BookingRoomService {
   public BookingRoomDto createBookingRoom(BookingRoomDto bookingRoom) {
     BookingRoomEntity bookingRoomEntity = new BookingRoomEntity();
     BeanUtils.copyProperties(bookingRoom, bookingRoomEntity);
+    bookingRoomEntity.setEmployeeId(123456789);
+    bookingRoomEntity.setStatus("CHECKIN");
 
     BookingRoomEntity storedBookingRoomDetails = bookingRoomRepository.save(bookingRoomEntity);
 

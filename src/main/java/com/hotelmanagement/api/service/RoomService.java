@@ -10,4 +10,6 @@ public interface RoomService {
   RoomDto getRoomById(long id);
 
   List<RoomDto> getRoomByStatus(String roomStatus);
+
+  RoomDto updateRoomStatus(long id, String roomStatus);
 }

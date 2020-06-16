@@ -56,4 +56,12 @@ public class RoomController {
 
     return returnValue;
   }
+
+  @PutMapping(path = "/{id}/{status}")
+  public RoomRest updateRoomStatus(@PathVariable long id, @PathVariable String status) {
+    RoomRest returnValue = new RoomRest();
+    RoomDto roomDto = roomService.updateRoomStatus(id, status);
+    BeanUtils.copyProperties(roomDto, returnValue);
+    return returnValue;
+  }
 }
