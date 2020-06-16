@@ -21,7 +21,7 @@ public class ServiceEntity implements Serializable {
   @Column(name = "serviceName", nullable = false)
   private String serviceName;
 
-  @Column(name = "serviceName", nullable = false)
+  @Column(name = "description", nullable = false)
   private String description;
 
   public long getId() {

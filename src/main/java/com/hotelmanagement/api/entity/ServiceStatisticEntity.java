@@ -22,7 +22,7 @@ public class ServiceStatisticEntity implements Serializable {
   @Column(name = "serviceId", nullable = false)
   private long serviceId;
 
-  @Column(name = "serviceId", nullable = false)
+  @Column(name = "booking_total", nullable = false)
   private int booking_total;
 
   public long getId() {

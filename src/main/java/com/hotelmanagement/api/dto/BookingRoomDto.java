@@ -1,33 +1,18 @@
-package com.hotelmanagement.api.entity;
+package com.hotelmanagement.api.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class BookingRoomDto implements Serializable {
 
-@Entity(name = "booking_room")
-public class BookingRoomEntity implements Serializable {
   /**
    *
    */
-  private static final long serialVersionUID = 5969633991217051068L;
+  private static final long serialVersionUID = -4763073672640165471L;
 
-  @Id
-  @GeneratedValue
   private long id;
-
-  @Column(name = "roomId", nullable = false)
   private long roomId;
-
-  @Column(name = "customerId", nullable = false)
   private long customerId;
-
-  @Column(name = "employeeId", nullable = false)
-  private long employeeId;
-
-  @Column(name = "status", nullable = false)
+  private long employeeId = 123456789;
   private String status;
 
   public long getId() {
@@ -69,5 +54,4 @@ public class BookingRoomEntity implements Serializable {
   public void setStatus(String status) {
     this.status = status;
   }
-
 }

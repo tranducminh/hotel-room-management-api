@@ -21,8 +21,8 @@ public class BookingServiceEntity implements Serializable {
   @Column(name = "serviceId", nullable = false)
   private long serviceId;
 
-  @Column(name = "customerId", nullable = false)
-  private long customerId;
+  @Column(name = "roomId", nullable = false)
+  private long roomId;
 
   @Column(name = "employeeId", nullable = false)
   private long employeeId;
@@ -43,12 +43,12 @@ public class BookingServiceEntity implements Serializable {
     this.serviceId = serviceId;
   }
 
-  public long getCustomerId() {
-    return this.customerId;
+  public long getRoomId() {
+    return this.roomId;
   }
 
-  public void setCustomerId(long customerId) {
-    this.customerId = customerId;
+  public void setRoomId(long roomId) {
+    this.roomId = roomId;
   }
 
   public long getEmployeeId() {

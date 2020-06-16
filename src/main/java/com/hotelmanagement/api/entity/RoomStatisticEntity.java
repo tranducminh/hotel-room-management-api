@@ -22,7 +22,7 @@ public class RoomStatisticEntity implements Serializable {
   @Column(name = "roomId", nullable = false)
   private long roomId;
 
-  @Column(name = "roomId", nullable = false)
+  @Column(name = "booking_total", nullable = false)
   private int booking_total;
 
   public long getId() {
