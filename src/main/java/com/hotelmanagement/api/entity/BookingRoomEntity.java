@@ -76,4 +76,20 @@ public class BookingRoomEntity implements Serializable {
     this.status = status;
   }
 
+  public String getTimeStart() {
+    return this.timeStart;
+  }
+
+  public void setTimeStart(String timeStart) {
+    this.timeStart = timeStart;
+  }
+
+  public String getTimeEnd() {
+    return this.timeEnd;
+  }
+
+  public void setTimeEnd(String timeEnd) {
+    this.timeEnd = timeEnd;
+  }
+
 }

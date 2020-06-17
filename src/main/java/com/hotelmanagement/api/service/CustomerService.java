@@ -4,4 +4,6 @@ import com.hotelmanagement.api.dto.CustomerDto;
 
 public interface CustomerService {
   CustomerDto createCustomer(CustomerDto customer);
+
+  CustomerDto getCustomerById(long id);
 }

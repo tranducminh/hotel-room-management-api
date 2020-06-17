@@ -27,4 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
     return returnValue;
   }
 
+  @Override
+  public CustomerDto getCustomerById(long id) {
+    CustomerDto returnValue = new CustomerDto();
+    CustomerEntity customerEntity = customerRepository.findById(id);
+    BeanUtils.copyProperties(customerEntity, returnValue);
+    return returnValue;
+  }
+
 }

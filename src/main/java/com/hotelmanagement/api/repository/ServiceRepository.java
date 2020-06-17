@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ServiceRepository extends CrudRepository<ServiceEntity, Long> {
   List<ServiceEntity> findAll();
+
+  ServiceEntity findById(long id);
 }

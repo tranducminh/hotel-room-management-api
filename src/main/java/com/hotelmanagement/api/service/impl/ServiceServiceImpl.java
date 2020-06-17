@@ -42,4 +42,12 @@ public class ServiceServiceImpl implements ServiceService {
 
     return serviceDtoList;
   }
+
+  @Override
+  public ServiceDto getServiceById(long id) {
+    ServiceDto returnValue = new ServiceDto();
+    ServiceEntity serviceEntity = serviceRepository.findById(id);
+    BeanUtils.copyProperties(serviceEntity, returnValue);
+    return returnValue;
+  }
 }

@@ -27,6 +27,17 @@ public class BookingServiceEntity implements Serializable {
   @Column(name = "employeeId", nullable = false)
   private long employeeId;
 
+  @Column(name = "status", nullable = false)
+  private String status;
+
+  public String getStatus() {
+    return this.status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
   public long getId() {
     return this.id;
   }

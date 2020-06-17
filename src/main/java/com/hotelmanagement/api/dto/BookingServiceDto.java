@@ -13,6 +13,15 @@ public class BookingServiceDto implements Serializable {
   private long roomId;
   private long serviceId;
   private long employeeId;
+  private String status;
+
+  public String getStatus() {
+    return this.status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
   public long getId() {
     return this.id;
