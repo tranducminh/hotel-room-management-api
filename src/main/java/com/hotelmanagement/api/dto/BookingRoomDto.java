@@ -13,10 +13,28 @@ public class BookingRoomDto implements Serializable {
   private long roomId;
   private long customerId;
   private long employeeId;
+  private String timeStart;
+  private String timeEnd;
   private String status;
 
   public long getId() {
     return this.id;
+  }
+
+  public String getTimeEnd() {
+    return timeEnd;
+  }
+
+  public void setTimeEnd(String timeEnd) {
+    this.timeEnd = timeEnd;
+  }
+
+  public String getTimeStart() {
+    return timeStart;
+  }
+
+  public void setTimeStart(String timeStart) {
+    this.timeStart = timeStart;
   }
 
   public void setId(long id) {

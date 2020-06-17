@@ -30,6 +30,12 @@ public class BookingRoomEntity implements Serializable {
   @Column(name = "status", nullable = false)
   private String status;
 
+  @Column(name = "timeStart", nullable = false)
+  private String timeStart;
+
+  @Column(name = "timeEnd", nullable = false)
+  private String timeEnd;
+
   public long getId() {
     return this.id;
   }
